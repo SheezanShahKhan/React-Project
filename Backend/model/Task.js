@@ -7,7 +7,7 @@ const taskSchema= new mongoose.Schema(
             trim:true,
             required:true,
             minLength:3,
-            maxLength:100,
+            maxLength:250,
         },
         status:{
             type:Boolean,
@@ -22,6 +22,6 @@ const taskSchema= new mongoose.Schema(
     },{timestamps:true},
 )
 
-const taskModel = mongoose.model("Task",taskSchema)
+const taskModel = mongoose.model("Task",taskSchema)   //first parameter is to refernce todo model, third parameter is ued to create custom model in databse
 
 export default taskModel

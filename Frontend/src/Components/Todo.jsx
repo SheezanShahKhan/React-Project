@@ -107,7 +107,7 @@ export default function Todo() {
         {todos.map((t) => (
           <li key={t._id} className="mt-2">
             <p className={t.status ? "line-through text-gray-500" : ""}>
-              {t.task}
+              {t.text}
             </p>
             <span>
               {t.status ? <p>Task Complete</p> : <p>Task Incomplete</p>}

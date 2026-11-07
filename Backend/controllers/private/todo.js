@@ -8,7 +8,7 @@ router.post("/create-tasks", async (req, res) => {
     try {
         let { task } = req.body
         let newTask = await taskModel.create({ task:task, 
-            user:req.user.id })
+        user:req.user.id })
 
         res.status(201).json({ msg: "Task Created successfully", newTask})
     } catch (error) {
